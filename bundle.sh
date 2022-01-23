@@ -31,8 +31,8 @@ cp dev/index.cjs.html bundles/purs
     parcel build dev/index.html --no-source-maps --dist-dir "bundles/parcel/pure-none/"
 
     #### WEBPACK
-    webpack --env bundleFolder="bundles/webpack/pure-none/" --env bundleName="index.js" --mode=development
-    webpack --env bundleFolder="bundles/webpack/pure-none/" --env bundleName="index.minified.js" --mode=production
+    webpack --env entry="./dev/index.js" --env bundleFolder="bundles/webpack/pure-none/" --env bundleName="index.js" --mode=development
+    webpack --env entry="./dev/index.js" bundleFolder="bundles/webpack/pure-none/" --env bundleName="index.minified.js" --mode=production
 )
 (
     export PATH="$HOME/.local/bin/pure-ctors:$PATH"; 
@@ -50,8 +50,8 @@ cp dev/index.cjs.html bundles/purs
     parcel build dev/index.html --no-source-maps --dist-dir "bundles/parcel/pure-ctors/"
 
     #### WEBPACK
-    webpack --env bundleFolder="bundles/webpack/pure-ctors/" --env bundleName="index.js" --mode=development
-    webpack --env bundleFolder="bundles/webpack/pure-ctors/" --env bundleName="index.minified.js" --mode=production
+    webpack --env entry="./dev/index.js" --env bundleFolder="bundles/webpack/pure-ctors/" --env bundleName="index.js" --mode=development
+    webpack --env entry="./dev/index.js" --env bundleFolder="bundles/webpack/pure-ctors/" --env bundleName="index.minified.js" --mode=production
 )
 (
     export PATH="$HOME/.local/bin/pure-all:$PATH"; 
@@ -69,8 +69,8 @@ cp dev/index.cjs.html bundles/purs
     parcel build dev/index.html --no-source-maps --dist-dir "bundles/parcel/pure-all/"
 
     #### WEBPACK
-    webpack --env bundleFolder="bundles/webpack/pure-all/" --env bundleName="index.js" --mode=development
-    webpack --env bundleFolder="bundles/webpack/pure-all/" --env bundleName="index.minified.js" --mode=production
+    webpack --env entry="./dev/index.js" --env bundleFolder="bundles/webpack/pure-all/" --env bundleName="index.js" --mode=development
+    webpack --env entry="./dev/index.js" --env bundleFolder="bundles/webpack/pure-all/" --env bundleName="index.minified.js" --mode=production
     
 )
 (
@@ -89,8 +89,8 @@ cp dev/index.cjs.html bundles/purs
     parcel build bundles/purs/index.cjs.html --no-source-maps --dist-dir "bundles/parcel/v0.14.5/"
 
     #### WEBPACK
-    webpack --env bundleFolder="bundles/webpack/v0.14.5/" --env bundleName="index.js" --mode=development
-    webpack --env bundleFolder="bundles/webpack/v0.14.5/" --env bundleName="index.minified.js" --mode=production
+    webpack --env entry="./bundles/purs/index.js" --env bundleFolder="bundles/webpack/v0.14.5/" --env bundleName="index.js" --mode=development
+    webpack --env entry="./bundles/purs/index.js" --env bundleFolder="bundles/webpack/v0.14.5/" --env bundleName="index.minified.js" --mode=production
     
 )
 find ./bundles -path '**/*.js' -exec gzip --keep {} \;
